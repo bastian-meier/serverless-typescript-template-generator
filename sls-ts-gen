@@ -4,7 +4,7 @@
 echo "Please define the Name of the Project:"
 read FOLDER
 echo "cloning template from https://github.com/bastian-meier/serverless-typescript-project-template to $FOLDER"
-git clone -q https://github.com/bastian-meier/serverless-typescript-template $FOLDER
+git clone -q https://github.com/bastian-meier/serverless-typescript-project-template $FOLDER
 cd $FOLDER
 rm -rf .git
 git init
