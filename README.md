@@ -1,4 +1,4 @@
-# serverless-typescript-template-generator
+# serverless-typescript-generator
 
 a tiny script to generate a **serverless-typescript-project** based on [serverless-typescript-project-template](https://github.com/bastian-meier/serverless-typescript-project-template)
 
