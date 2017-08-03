@@ -1,0 +1,22 @@
+#/bin/bash
+
+
+if [ $# -eq 0 ]
+    then
+        echo "you have to provide a function-name: sls-ts-gen FUNCTIONNAME"
+    else
+        FOLDER=$1
+        echo "cloning template from https://github.com/bastian-meier/serverless-typescript-template to $FOLDER"
+        git clone -q https://github.com/bastian-meier/serverless-typescript-template $1
+        cd $1
+        rm -rf .git
+        echo "updating configuration ..."
+        sed -e "s/serverless-typescript-template/${FOLDER}/g" serverless.yml > tmp.yml
+        mv tmp.yml serverless.yml
+        echo "installing dependencies ..."
+        npm install
+        echo " "
+        echo " "
+        echo " "
+        echo "lambda function $FOLDER created, please read $FOLDER/REAMDE.md"
+fi
