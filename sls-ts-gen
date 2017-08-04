@@ -8,6 +8,7 @@ git clone -q https://github.com/bastian-meier/serverless-typescript-project-temp
 cd $FOLDER
 rm -rf .git
 git init
+mkdir src/shared
 echo "installing dependencies ..."
 npm install
 echo " "
